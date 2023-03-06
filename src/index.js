@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import ReactDOM from 'react-dom/client';
+import {
+  BrowserRouter as Router,
+  useLocation,
+} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="font-montserrat">
+      <Router>
+        <ScrollToTop />
+        <App />
+      </Router>
+    </div>
   </React.StrictMode>
 );
 
