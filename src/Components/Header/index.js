@@ -4,7 +4,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <div className='container mx-auto flex justify-between items-center py-12 px-4'>
-      <div className='text-6xl font-black'><span className='mr-4'>👋</span>Hey!</div>
+      <div className='text-6xl font-black'><span className='mr-4'>👋</span></div>
       {/*
         For now, I have decided to remove this.
         Once the page is built out a little more I will add it back.
